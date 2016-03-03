@@ -19,9 +19,7 @@ public class ProfissionalService {
 		List<Profissional> result = new ArrayList<Profissional>();
 		boolean dbConectado = db.connect();
 		if(dbConectado == true){
-			//TODO: Acrecentar a String de Query abaixo o nome do banco de dados
-			//TODO: corrigir o erro de escrita no nome da tabela
-			ResultSet resultSet = db.makeQuery("SELECT * FROM couch_mobile_db.profisional ORDER BY ID_Profissional");
+			ResultSet resultSet = db.makeQuery("SELECT * FROM couch_mobile_db.profissional ORDER BY ID_Profissional");
 			try {
 				while(resultSet.next()){
 					Profissional p = new Profissional();
