@@ -19,7 +19,9 @@ public class ProfissionalService {
 		List<Profissional> result = new ArrayList<Profissional>();
 		boolean dbConectado = db.connect();
 		if(dbConectado == true){
-			ResultSet resultSet = db.makeQuery("SELECT * FROM Profissional ORDER BY ID_Profissional");
+			//TODO: Acrecentar a String de Query abaixo o nome do banco de dados
+			//TODO: corrigir o erro de escrita no nome da tabela
+			ResultSet resultSet = db.makeQuery("SELECT * FROM couch_mobile_db.profisional ORDER BY ID_Profissional");
 			try {
 				while(resultSet.next()){
 					Profissional p = new Profissional();
@@ -27,7 +29,8 @@ public class ProfissionalService {
 					p.setFoto(resultSet.getString("Foto"));
 					p.setNome(resultSet.getString("Nome"));
 					p.setEmail(resultSet.getString("Email"));
-					p.setSenha(resultSet.getString("Senha"));
+					//TODO: inserir esse campo na tabela dos servidores local e remoto
+					//p.setSenha(resultSet.getString("Senha"));
 					p.setTelefone(resultSet.getString("Telefone"));
 					p.setFormacao(resultSet.getString("Formacao"));
 					p.setEspecializacao(resultSet.getString("Especializacao"));

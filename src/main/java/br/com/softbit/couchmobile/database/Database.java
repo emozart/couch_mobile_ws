@@ -11,13 +11,13 @@ public class Database {
 	private Connection conn = null;
 	private Statement statement = null;
 	private ResultSet resultSet = null;
-	private String host = "couch-mobile-db.mysql.uhserver.com";
+	private String host = "localhost"; //"couch-mobile-db.mysql.uhserver.com";
 	private String db = "couch_mobile_db";
 	private int port = 3306;
-	private String usuario = "eltonmozart";
-	private String senha = "Mnbvcxz12@";
+	private String usuario = "elton"; //"eltonmozart";
+	private String senha = "123456";//"Mnbvcxz12@";
 	private String url = "jdbc:mysql://%s:%d/%s";
-	private String driver = "";
+	private String driver = "com.mysql.jdbc.Driver";
 	
 	public Database(){
 		
